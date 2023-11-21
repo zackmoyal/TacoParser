@@ -21,7 +21,7 @@ namespace LoggingKata
             // Optional: Log an error if you get 0 lines and a warning if you get 1 line
             var lines = File.ReadAllLines(csvPath);
 
-            
+            // This will display the first item in your lines array
             logger.LogInfo($"Lines: {lines[0]}");
 
             // Create a new instance of your TacoParser class
