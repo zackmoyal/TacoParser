@@ -12,7 +12,7 @@ namespace LoggingKata
 
         static void Main(string[] args)
         {
-            // Objective: Find the two Taco Bells that are the furthest apart from one another.
+            // Objective: Find the two Taco Bells that are the farthest apart from one another.
             // Some of the TODO's are done for you to get you started. 
 
             logger.LogInfo("Log initialized");
@@ -33,7 +33,7 @@ namespace LoggingKata
   
             // Complete Parse method in TacoParser class and then START BELOW ----------
 
-            // TODO: Create two `ITrackable` variables with initial values of `null`. These will be used to store your two Taco Bells that are the furthest from each other.
+            // TODO: Create two `ITrackable` variables with initial values of `null`. These will be used to store your two Taco Bells that are the farthest from each other.
             // TODO: Create a `double` variable to store the distance
 
             // TODO: Add the Geolocation library to enable location comparisons: using GeoCoordinatePortable;
