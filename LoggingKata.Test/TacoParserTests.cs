@@ -6,10 +6,8 @@ namespace LoggingKata.Test
     public class TacoParserTests
     {
         [Fact]
-        public void ShouldDoSomething()
+        public void ShouldReturnNonNullObject()
         {
-            // TODO: Complete Something, if anything
-
             //Arrange
             var tacoParser = new TacoParser();
 
@@ -27,8 +25,8 @@ namespace LoggingKata.Test
         public void ShouldParseLongitude(string line, double expected)
         {
             // TODO: Complete the test with Arrange, Act, Assert steps below.
-            //       Note: "line" represents input data we will Parse to
-            //       extract the Longitude.  
+            //       Note: "line" string represents input data we will Parse 
+            //       to extract the Longitude.  
             //       Each "line" from your .csv file
             //       represents a TacoBell location
 
@@ -40,7 +38,7 @@ namespace LoggingKata.Test
         }
 
 
-        //TODO: Create a test ShouldParseLatitude
+        //TODO: Create a test called ShouldParseLatitude
 
     }
 }
