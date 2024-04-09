@@ -42,7 +42,7 @@
             // TODO -- DONE: Set the values of the point correctly (Latitude and Longitude) 
 
             // TODO -- DONE: Create an instance of the TacoBell class
-            // TODO: Set the values of the class correctly (Name and Location)
+            // TODO -- DONE: Set the values of the class correctly (Name and Location)
             var point = new Point();
             point.Latitude = latitude;
             point.Longitude = longitude;
