@@ -9,6 +9,7 @@ namespace LoggingKata
     {
         static readonly ILog logger = new TacoLogger();
         const string csvPath = "TacoBell-US-AL.csv";
+        const double MetersToMiles = 0.00062137;
 
         static void Main(string[] args)
         {
@@ -47,7 +48,7 @@ namespace LoggingKata
             ITrackable tacoBell2 = null;
 
             // TODO -- DONE: Create a `double` variable to store the distance
-            double distance = 0;
+            double finalDistance = 0;
 
             // TODO -- DONE: Add the Geolocation library to enable location comparisons: using GeoCoordinatePortable;
             // Look up what methods you have access to within this library.
@@ -82,9 +83,11 @@ namespace LoggingKata
 
                     // TODO -- DONE: Now, still being inside the scope of the second for loop, compare the two locations using `.GetDistanceTo()` method, which returns a double.
                     // If the distance is greater than the currently saved distance, update the distance variable and the two `ITrackable` variables you set above.
-                    if(corA.GetDistanceTo(corB) > distance)
+                    var testDistance = corA.GetDistanceTo(corB);
+
+                    if (testDistance > finalDistance)
                     {
-                        distance = corA.GetDistanceTo(corB);
+                        finalDistance = corA.GetDistanceTo(corB);
                         tacoBell1 = locA;
                         tacoBell2 = locB;
                     }
@@ -96,6 +99,7 @@ namespace LoggingKata
             // Once you've looped through everything, you've found the two Taco Bells farthest away from each other.
             // TODO -- DONE: Display these two Taco Bell locations to the console.
             logger.LogInfo($"{tacoBell1.Name} and {tacoBell2.Name} are the furthest apart.");
+            Console.WriteLine($"The total distance is {Math.Round((finalDistance * MetersToMiles), 2)} miles.");
 
         }
     }

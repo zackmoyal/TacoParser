@@ -10,6 +10,7 @@ namespace LoggingKata
     {
         public TacoBell() 
         {
+
         }
 
         public string Name { get; set; }
